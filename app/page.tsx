@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-export function requestUserRepos(username: string) {
+function requestUserRepos(username: string) {
   // create a variable to hold the `Promise` returned from `fetch`
   return Promise.resolve(
     fetch(`https://api.github.com/users/${username}/repos`)
   );
 }
 
-export function requestUserFollowers(username: string) {
+function requestUserFollowers(username: string) {
   // create a variable to hold the `Promise` returned from `fetch`
   return Promise.resolve(
     fetch(`https://api.github.com/users/${username}/followers`)
